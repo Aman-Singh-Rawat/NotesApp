@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.fragments.HomeFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <HorizontalScrollView
+        android:id="@+id/horizontalScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/horizontalMarginTop"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout">
+
+        <LinearLayout
+            android:layout_width="@dimen/layoutWidth"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgFilter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/img_filtering"
+                android:padding="@dimen/imgFilter"
+                android:layout_marginStart="@dimen/filterMarginStart"
+                android:background="@drawable/bg_filtering"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnHigh"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/filterBtnSize"
+                android:text="@string/high"
+                android:fontFamily="@font/poppins_medium"
+                android:textAllCaps="false"
+                android:gravity="center"
+                android:paddingStart="@dimen/filterPaddingStartEnd"
+                android:paddingEnd="@dimen/filterPaddingStartEnd"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/filterMarginStart"
+                android:textColor="@color/red_color"
+                android:background="@drawable/bg_filtering"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnMedium"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/filterBtnSize"
+                android:text="@string/medium"
+                android:fontFamily="@font/poppins_medium"
+                android:textAllCaps="false"
+                android:gravity="center"
+                android:textColor="@color/yellow"
+                android:layout_gravity="center"
+                android:paddingStart="@dimen/filterPaddingStartEnd"
+                android:paddingEnd="@dimen/filterPaddingStartEnd"
+                android:layout_marginStart="@dimen/filterMarginStart"
+                android:background="@drawable/bg_filtering"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnLow"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/filterBtnSize"
+                android:text="@string/low"
+                android:fontFamily="@font/poppins_medium"
+                android:textAllCaps="false"
+                android:gravity="center"
+                android:textColor="@color/green"
+                android:layout_gravity="center"
+                android:paddingStart="@dimen/filterPaddingStartEnd"
+                android:paddingEnd="@dimen/filterPaddingStartEnd"
+                android:layout_marginStart="@dimen/filterMarginStart"
+                android:background="@drawable/bg_filtering"/>
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvHomeFragment"
+        android:layout_width="@dimen/layoutWidth"
+        android:layout_height="@dimen/layoutWidth"
+        tools:listitem="@layout/item_notes"
+        app:layoutManager="androidx.recyclerview.widget.StaggeredGridLayoutManager"
+        app:spanCount="2"
+        app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnAddNotes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_add"
+        android:layout_margin="@dimen/fab_button_margin"
+        android:backgroundTint="@color/purple_200"
+        android:contentDescription="@string/fab_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

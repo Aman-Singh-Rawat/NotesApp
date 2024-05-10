@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">NotesApp</string>
+    <string name="notes_app">Notes App</string>
+    <string name="life_is_too_fast_don_t_forget_anything_njust_note_it">Life is too fast don\'t forget anything\njust Note it!</string>
+    <string name="by_naman_singh">By\nAman Singh</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="fab_button">fab_button</string>
+    <string name="title">Title&#8230;</string>
+    <string name="subtitle">Subtitle&#8230;</string>
+    <string name="notes">Notes&#8230;</string>
+    <string name="are_you_sure_want_to_delete_nthis_note">Are you sure want to delete\nthis Note?</string>
+    <string name="no">No</string>
+    <string name="yes">Yes</string>
+    <string name="high">High</string>
+    <string name="low">Low</string>
+    <string name="medium">Medium</string>
+    <string name="edit_notes">Edit Notes</string>
+    <string name="home_page">Home Page</string>
+    <string name="delete">Delete</string>
+    <string name="create_fragment">Create Fragment</string>
+    <string name="search_view">Search View</string>
+    <string name="enter_note_here">Enter Notes Here&#8230;</string>
+    <string name="search">Search</string>
+</resources>

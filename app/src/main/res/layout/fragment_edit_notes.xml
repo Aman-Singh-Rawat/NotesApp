@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragments.EditNotesFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:menu="@menu/edit_menu">
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tvEditInputLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/cnTvMarginTop"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:layout_constraintEnd_toEndOf="@id/glCreateNotesEnd"
+        app:layout_constraintStart_toStartOf="@id/glCreateNotesStart"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/title"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tvEditInputLayoutSubtitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/cnTvMarginTop"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:layout_constraintEnd_toEndOf="@id/glCreateNotesEnd"
+        app:layout_constraintStart_toStartOf="@id/glCreateNotesStart"
+        app:layout_constraintTop_toBottomOf="@+id/tvEditInputLayout">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etSubtitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/subtitle"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <LinearLayout
+        android:id="@+id/llEditNotes"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/cnTvMarginTop"
+        app:layout_constraintStart_toStartOf="@id/glCreateNotesStart"
+        app:layout_constraintEnd_toEndOf="@id/glCreateNotesEnd"
+        app:layout_constraintTop_toBottomOf="@+id/tvEditInputLayoutSubtitle">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgGreenDot"
+            android:layout_width="@dimen/dotSize"
+            android:layout_height="@dimen/dotSize"
+            android:background="@drawable/green_dot"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgYellowDot"
+            android:layout_width="@dimen/dotSize"
+            android:layout_height="@dimen/dotSize"
+            android:layout_marginStart="@dimen/dotMarginStart"
+            android:background="@drawable/yellow_dot"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgRedDot"
+            android:layout_width="@dimen/dotSize"
+            android:layout_height="@dimen/dotSize"
+            android:layout_marginStart="@dimen/dotMarginStart"
+            android:background="@drawable/red_dot"/>
+
+    </LinearLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tvEditInputLayoutNotes"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/cnTvMarginTop"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:layout_constraintEnd_toEndOf="@id/glCreateNotesEnd"
+        app:layout_constraintStart_toStartOf="@id/glCreateNotesStart"
+        app:layout_constraintTop_toBottomOf="@+id/llEditNotes">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etNotes"
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            android:hint="@string/notes"
+            android:gravity="start"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnDoneNotes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_done"
+        android:layout_margin="@dimen/fab_button_margin"
+        android:backgroundTint="@color/purple_200"
+        android:contentDescription="@string/fab_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glCreateNotesStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.04" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glCreateNotesEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.96" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

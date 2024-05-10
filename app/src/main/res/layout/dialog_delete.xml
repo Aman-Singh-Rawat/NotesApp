@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical"
+
+    android:background="@drawable/bg_dialog_delete">
+
+    <View
+        android:layout_width="@dimen/dialogViewWidth"
+        android:layout_height="@dimen/dialogViewHeight"
+        android:background="@drawable/bg_dialog_view"
+        android:layout_marginTop="@dimen/dialogViewMarginTop"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="@dimen/dialogTitleSize"
+        android:fontFamily="@font/poppins_semibold"
+        android:layout_marginTop="@dimen/dialogTitleMarginTop"
+        android:text="@string/are_you_sure_want_to_delete_nthis_note"/>
+
+    <Button
+        android:id="@+id/btnDialogNo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dialogBtnMarginStartEnd"
+        android:layout_marginEnd="@dimen/dialogBtnMarginStartEnd"
+        android:backgroundTint="@color/black"
+        android:fontFamily="@font/poppins_medium"
+        android:padding="@dimen/dialogBtnPadding"
+        android:text="@string/no"
+        android:textAllCaps="false"
+        android:layout_marginTop="@dimen/dialogBtnNoMarginTop"
+        android:textSize="@dimen/dialogBtnTextSize"
+        app:cornerRadius="@dimen/dialogBtnCardCornerRadius" />
+
+    <Button
+        android:id="@+id/btnDialogYes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dialogBtnMarginStartEnd"
+        android:layout_marginEnd="@dimen/dialogBtnMarginStartEnd"
+        android:backgroundTint="@color/purple_500"
+        android:fontFamily="@font/poppins_medium"
+        android:padding="@dimen/dialogBtnPadding"
+        android:text="@string/yes"
+        android:textAllCaps="false"
+        android:layout_marginTop="@dimen/dialogBtnYesMarginTop"
+        android:textSize="@dimen/dialogBtnTextSize"
+        app:cornerRadius="@dimen/dialogBtnCardCornerRadius"
+        android:layout_marginBottom="@dimen/dialog_delete_btn_yes_margin_bottom"/>
+
+</LinearLayout>
